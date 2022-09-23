@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart</title>
+
+    <style>
+      :root {
+        --heartcolor: #df7aad;
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        height: 100vh;
+        background-color: pink;
+        animation: back 1s infinite;
+      }
+
+      .heart {
+        margin: auto;
+        position: relative;
+        top: 279px;
+        height: 50px;
+        width: 50px;
+        background: var(--heartcolor, pink);
+        transform: rotate(45deg);
+        animation: beat 1s infinite;
+      }
+
+      .heart::before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: -22px;
+        left: 0px;
+        background: var(--heartcolor, pink);
+      }
+
+      .heart::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 22px;
+        background: var(--heartcolor, pink);
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+
+      @keyframes beat {
+        0% {
+          transform: scale(1) roate(45deg);
+        }
+        50% {
+          transform: scale(0.5) rotate(45deg);
+          box-shadow: 5px 5px 30px white;
+        }
+      }
+
+      @keyframes back {
+        50% {
+          background: whitesmoke;
+        }
+      }
+
+      div {
+        box-shadow: 10px 10px 35px 10px #03000341;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heart"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-group{
+    position: relative;
+    margin:50px;
+}
+
+.input{
+    padding: 15px;
+    background-color: transparent;
+}
+.input-label{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(15px,15px);
+    transform-origin: left;
+    transition: transform 0.30s;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label{
+
+    transform: translate(0,-30px) scale(0.8);
+    color: #5cd189;
+
+}
+
+.input:is(:focus,:valid){
+    outline-color: #5cd189
+}

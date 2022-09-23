@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+        *, 
+        *::before{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            background-color: #0a0a0a;
+            background-size: cover;
+            height:100vh;
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            color:#fff;
+        }
+        
+        .menu{
+            color:#ecdbdb;
+        }
+        header{
+            min-height: 100px;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background: transparent;
+        }
+
+        a{
+            
+            padding:5px 10px;
+            text-align: center;
+            list-style-type: none; 
+            position: relative;
+            text-decoration: none;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            color: #ecdbdb;
+            font-weight: 800;
+            letter-spacing: 2px;
+            transition: all 0.7s ease;
+            
+        }
+
+        a::before{
+            content:"";
+            position:absolute;
+            background-color: gold;
+            height: 2px;
+            width:0;
+            bottom:-5px;
+            left:10px;
+            transition: all 0.5s linear;
+        }
+
+        a:hover::before{
+            width:80%;
+
+        }
+
+        a:hover{
+            color:#fff;
+            transform:scale(1.1);
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <img src="" alt="">
+            </div>
+            
+            <nav class="menu">
+                <a href="#">Home</a>|
+                <a href="#">Services</a>| 
+                <a href="#">About</a>|
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+    </div>
+    
+</body>
+</html>
