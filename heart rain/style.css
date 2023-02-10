@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.btn {
+    color: #fff;
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s;
+    box-shadow: 0 0 5px #3a3a3a;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    transform: scale(0.8);
+}
+
+.text {
+    padding: 20px;
+    color: red;
+    font-size: 80px;
+    display: none;
+    z-index: 1;
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 0 0 6px #d9ff00;
+    animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: rotateX(45deg);
+        opacity: 1;
+    }
+}
+
+.heart {
+    position: fixed;
+    top: -2vh;
+    font-size: 30px;
+    transform: translateY(0);
+    animation: heartfall 3s linear forwards;
+
+}
+
+@keyframes heartfall {
+    to {
+        transform: translateY(110vh);
+    }
+}
